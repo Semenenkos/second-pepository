@@ -44,5 +44,28 @@ string Method4(int count, string s)
     }
     return result;
 }
-string res = Method4(3, "Вот такой вот метод 4, "); // создаем переменную, чтобы вызвать метод
+string res = Method4(3, "Вот такой вот метод 4_1, "); // создаем переменную, чтобы вызвать метод
 Console.WriteLine(res);
+
+// То же применение Метода 4, только с циклом for 
+string Method4_1(int count, string s)
+{
+    string result = string.Empty; // пустая строка
+    for (int i = 0; i < count; i++)
+    {
+      result = result + s;
+    }
+    return result;
+}
+string res_1 = Method4_1(3, "Вот такой вот метод 4_1, "); // создаем переменную, чтобы вызвать метод
+Console.WriteLine(res_1);
+
+//Демонстрация цикла в цикле (создание пародии на таблицу умножения)
+for (int i = 2; i <= 10; i++)
+{
+   for (int j = 2; j <= 10; j++)
+   {
+       Console.WriteLine($"{i} * {j} = {i*j}");
+   }
+   Console.WriteLine();
+}
